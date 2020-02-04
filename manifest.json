@@ -1,0 +1,23 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "test",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "*://*/*/",
+    "webRequest",
+    "tabs"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [{
+    "matches": ["*://*/*"],
+    "js": ["content.js"]
+  }]
+}
